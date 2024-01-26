@@ -13,7 +13,7 @@ export class User {
   email: string;
 
   @Column()
-  passwordHash: string;
+  password: string;
 
   @OneToMany(() => Wallet, (wallet) => wallet.user)
   wallets: Wallet[];
