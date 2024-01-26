@@ -4,6 +4,8 @@ import { User } from './modules/user/entities/user.entity';
 import { UserService } from './modules/user/user.service';
 import { UserController } from './modules/user/user.controller';
 import { Wallet } from './modules/wallet/entity/wallet.entity';
+import { Crypto } from './modules/crypto/entity/crypto.entity';
+
 
 @Module({
   imports: [

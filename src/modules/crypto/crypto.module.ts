@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Crypto } from './crypto.entity';
+import { Crypto } from './entity/crypto.entity';
 import { CryptoController } from './crypto.controller';
 import { CryptoService } from './crypto.service';
 
