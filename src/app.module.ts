@@ -1,8 +1,9 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { User } from './user/user.entity';
-import { UserService } from './user/user.service';
-import { UserController } from './user/user.controller';
+import { User } from './modules/user/entities/user.entity';
+import { UserService } from './modules/user/user.service';
+import { UserController } from './modules/user/user.controller';
+import { Wallet } from './modules/wallet/entity/wallet.entity';
 
 @Module({
   imports: [
@@ -13,13 +14,12 @@ import { UserController } from './user/user.controller';
       username: 'postgres',
       password: 'postgres',
       database: 'postgres',
-      entities: [User],
+      entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true,
     }),
-    TypeOrmModule.forFeature([User]),
+    TypeOrmModule.forFeature([User, Crypto, Wallet]),
   ],
   providers: [UserService],
-  controllers: [UserController]
+  controllers: [UserController],
 })
-
 export class AppModule {}
