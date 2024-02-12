@@ -83,7 +83,7 @@ curl -X POST http://localhost:3000/crypto \
   -d '{"name": "Bitcoin", "symbol": "BTC"}'
 ```
 
-### Get All Cryptos
+### Get All Crypto currencies
 
 ```shell
 curl http://localhost:3000/crypto
